@@ -1,13 +1,15 @@
 import React, { createContext, useState } from "react";
 import AddName from "./components/AddName";
+import NameList from "./components/NameList";
 
 export const ListContext = createContext();
 const App = () => {
   const [nameList, setNameList] = useState();
   return (
     <div className="App">
-      <ListContext.Provider>
+      <ListContext.Provider value={{ nameList, setNameList }}>
         <AddName />
+        <NameList />
       </ListContext.Provider>
     </div>
   );

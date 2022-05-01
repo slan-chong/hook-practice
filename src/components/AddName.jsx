@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { ListContext } from "../App";
 
 const AddName = () => {
-  const [input, setInput] = useState();
-  const [name, setName] = useState();
+  const [input, setInput] = useState("");
+  const [name, setName] = useState([]);
+  const { setNameList } = useContext(ListContext);
 
   const inputHandler = (e) => {
     setInput(e.target.value);
@@ -13,6 +15,9 @@ const AddName = () => {
       setInput("");
     }
   };
+  useEffect(() => {
+    setNameList(name);
+  }, [name]);
   return (
     <div>
       <input
