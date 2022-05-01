@@ -18,7 +18,7 @@ const NameList = () => {
           {nameList.map((name) => {
             if (searchTerm === "") {
               return <p key={uuidv4()}>{name}</p>;
-            } else if (name.includes(searchTerm)) {
+            } else if (name.toLowerCase().includes(searchTerm.toLowerCase())) {
               return <p key={uuidv4()}>{name}</p>;
             }
           })}

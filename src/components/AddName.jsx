@@ -17,7 +17,7 @@ const AddName = () => {
   };
   useEffect(() => {
     setNameList(name);
-  }, [name]);
+  }, [name, setNameList]);
   return (
     <div>
       <input

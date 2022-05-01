@@ -6,7 +6,7 @@ import "./App.scss";
 
 export const ListContext = createContext();
 const App = () => {
-  const [nameList, setNameList] = useState();
+  const [nameList, setNameList] = useState([]);
   return (
     <div className="App">
       <LocalTime />
