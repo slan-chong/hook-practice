@@ -1,7 +1,16 @@
-import "./App.css";
+import React, { createContext, useState } from "react";
+import AddName from "./components/AddName";
 
-function App() {
-  return <div className="App"></div>;
-}
+export const ListContext = createContext();
+const App = () => {
+  const [nameList, setNameList] = useState();
+  return (
+    <div className="App">
+      <ListContext.Provider>
+        <AddName />
+      </ListContext.Provider>
+    </div>
+  );
+};
 
 export default App;
