@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial;
+}
+
+input,
+button {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  height: 36px;
+  font-size: 18px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+p {
+  font-size: 18px;
+  margin: 10px;
+}

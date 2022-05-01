@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import AddName from "./components/AddName";
 import NameList from "./components/NameList";
+import "./App.scss";
 
 export const ListContext = createContext();
 const App = () => {
