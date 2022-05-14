@@ -4,7 +4,7 @@ import NameList from "./components/NameList";
 import LocalTime from "./components/LocalTime";
 import "./App.scss";
 
-export const ListContext = createContext();
+const ListContext = createContext();
 const App = () => {
   const [nameList, setNameList] = useState([]);
   return (
