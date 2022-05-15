@@ -3,7 +3,7 @@ import { ListContext } from "../App";
 import axios from "axios";
 
 const FetchName = () => {
-  const URL = "https://jsonplaceholder.typicode.com/users";
+  const URL = "https://jsonplaceholder.typicode.com/comments";
   const { nameList, setNameList } = useContext(ListContext);
   const [user, setUser] = useState([]);
   const nameMapHandler = (rawData) => {
@@ -14,9 +14,15 @@ const FetchName = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get(URL).then((res) => {
-        nameMapHandler(res.data);
-      });
+      await axios
+        .get(URL, {
+          params: {
+            _limit: 20,
+          },
+        })
+        .then((res) => {
+          nameMapHandler(res.data);
+        });
     };
     fetchData();
   }, []);
