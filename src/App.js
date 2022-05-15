@@ -3,8 +3,9 @@ import AddName from "./components/AddName";
 import NameList from "./components/NameList";
 import LocalTime from "./components/LocalTime";
 import "./App.scss";
+// import Twich from "./components/Twich";
 
-const ListContext = createContext();
+export const ListContext = createContext();
 const App = () => {
   const [nameList, setNameList] = useState([]);
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <AddName />
         <NameList />
       </ListContext.Provider>
+      {/* <Twich /> */}
     </div>
   );
 };
