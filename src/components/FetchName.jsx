@@ -4,7 +4,7 @@ import axios from "axios";
 
 const FetchName = () => {
   const URL = "https://jsonplaceholder.typicode.com/comments";
-  const { nameList, setNameList } = useContext(ListContext);
+  const { setNameList } = useContext(ListContext);
   const [user, setUser] = useState([]);
   const nameMapHandler = (rawData) => {
     let temp = [];
@@ -17,7 +17,7 @@ const FetchName = () => {
       await axios
         .get(URL, {
           params: {
-            _limit: 20,
+            _limit: 40,
           },
         })
         .then((res) => {
