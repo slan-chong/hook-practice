@@ -2,7 +2,7 @@
 // import request from "request";
 
 // const Twich = () => {
-//   const [games, setGames] = useState();
+//   let [games, setGames] = useState();
 //   useEffect(() => {
 //     const CLIENT_ID = "lfvotu9w8wkjxoo0gr29fgxxehnzrx";
 //     const BASE_URL = "https://api.twitch.tv/kraken";

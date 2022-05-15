@@ -4,14 +4,14 @@ import { ListContext } from "../App";
 const AddName = () => {
   const [input, setInput] = useState("");
   const [name, setName] = useState([]);
-  const { setNameList } = useContext(ListContext);
+  const { nameList, setNameList } = useContext(ListContext);
 
   const inputHandler = (e) => {
     setInput(e.target.value);
   };
   const submitHandler = () => {
     if (input) {
-      setName([...name, input]);
+      setName([...nameList, input]);
       setInput("");
     }
   };
