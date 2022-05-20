@@ -9,21 +9,29 @@ const NameList = () => {
   return (
     <>
       <input
+        className="px-4 py-3 border-2 border-gray-500 rounded"
         onChange={(event) => setSearchTerm(event.target.value)}
         type="text"
         placeholder="Search..."
       />
-      {nameList && (
-        <div>
-          {nameList.map((name) => {
-            if (searchTerm === "") {
-              return <p key={uuidv4()}>{name}</p>;
-            } else if (name.toLowerCase().includes(searchTerm.toLowerCase())) {
-              return <p key={uuidv4()}>{name}</p>;
-            }
-          })}
-        </div>
-      )}
+
+      {nameList &&
+        nameList.map((name) => {
+          if (searchTerm === "") {
+            return (
+              <p className="p-2 " key={uuidv4()}>
+                {name}
+              </p>
+            );
+          } else if (name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return (
+              <p className="p-2 " key={uuidv4()}>
+                {name}
+              </p>
+            );
+          }
+          return null;
+        })}
     </>
   );
 };

@@ -19,14 +19,20 @@ const AddName = () => {
     setNameList(name);
   }, [name, setNameList]);
   return (
-    <div>
+    <div className="p-2 ">
       <input
+        className="px-4 py-3 border-2 border-gray-500 rounded"
         onChange={inputHandler}
         value={input}
         type="text"
         placeholder="Add Name..."
       />
-      <button onClick={submitHandler}>Submit</button>
+      <button
+        onClick={submitHandler}
+        className="px-4 py-3 m-2 border-2 border-gray-500 rounded"
+      >
+        Submit
+      </button>
     </div>
   );
 };

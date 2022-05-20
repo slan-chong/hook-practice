@@ -8,7 +8,7 @@ const LocalTime = (props) => {
       setTime(date.toLocaleTimeString());
     }, 1000);
   }, []);
-  return <div className="text-3xl font-bold underline">{time}</div>;
+  return <div className="text-3xl font-bold underline ">{time}</div>;
 };
 
 export default LocalTime;
