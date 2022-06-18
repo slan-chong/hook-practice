@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ListContext } from "../App";
+import { ListContext } from "../Pages/Search";
 import { v4 as uuidv4 } from "uuid";
 
 const NameList = () => {

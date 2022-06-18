@@ -1,20 +1,20 @@
-import React, { createContext, useState } from "react";
-import AddName from "./components/AddName";
-import NameList from "./components/NameList";
+import React from "react";
 import LocalTime from "./components/LocalTime";
-import FetchName from "./components/FetchName";
-
-export const ListContext = createContext();
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Search from "./Pages/Search";
+import HookAdvanced from "./Pages/HookAdvanced";
+import ToHomePage from "./components/ToHomePage";
 const App = () => {
-  const [nameList, setNameList] = useState([]);
   return (
     <div className="App bg-gray-300 text-center">
       <LocalTime />
-      <ListContext.Provider value={{ nameList, setNameList }}>
-        <AddName />
-        <FetchName />
-        <NameList />
-      </ListContext.Provider>
+      <ToHomePage />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Search" element={<Search />} />
+        <Route path="/HookAdvanced" element={<HookAdvanced />} />
+      </Routes>
     </div>
   );
 };

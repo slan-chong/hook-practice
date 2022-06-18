@@ -1,17 +1,14 @@
 import React, { useState, useContext, useEffect } from "react";
-import { ListContext } from "../App";
+import { ListContext } from "../Pages/Search";
 
 const AddName = () => {
   const [input, setInput] = useState("");
   const [name, setName] = useState([]);
   const { nameList, setNameList } = useContext(ListContext);
 
-  const inputHandler = (e) => {
-    setInput(e.target.value);
-  };
   const submitHandler = () => {
     if (input) {
-      setName([...nameList, input]);
+      setName([input, ...nameList]);
       setInput("");
     }
   };
@@ -22,7 +19,7 @@ const AddName = () => {
     <div className="p-2 ">
       <input
         className="px-4 py-3 border-2 border-gray-500 rounded"
-        onChange={inputHandler}
+        onChange={(e) => setInput(e.target.value)}
         value={input}
         type="text"
         placeholder="Add Name..."

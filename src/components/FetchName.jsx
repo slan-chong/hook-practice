@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { ListContext } from "../App";
+import { ListContext } from "../Pages/Search";
 import axios from "axios";
 
 const FetchName = () => {
@@ -14,15 +14,9 @@ const FetchName = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await axios
-        .get(URL, {
-          params: {
-            _limit: 40,
-          },
-        })
-        .then((res) => {
-          nameMapHandler(res.data);
-        });
+      await axios.get(URL).then((res) => {
+        nameMapHandler(res.data);
+      });
     };
     fetchData();
   }, []);
