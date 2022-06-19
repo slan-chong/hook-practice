@@ -37,8 +37,8 @@ const HookAdvanced = () => {
         Clean Name
       </div>
 
-      {name.map((n) => {
-        return <div>{n}</div>;
+      {name.map((n, index) => {
+        return <div key={index}>{n}</div>;
       })}
     </div>
   );
