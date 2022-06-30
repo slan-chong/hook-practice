@@ -22,8 +22,10 @@ const HookAdvanced = () => {
       />
       <button
         onClick={() => {
-          setName([nameInput.current.value, ...name]);
-          nameInput.current.value = "";
+          if (nameInput.current.value) {
+            setName([nameInput.current.value, ...name]);
+            nameInput.current.value = "";
+          }
         }}
       >
         Submit

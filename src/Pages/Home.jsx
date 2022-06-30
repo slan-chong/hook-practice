@@ -14,6 +14,10 @@ const nav = [
     link: "/useMemo",
     btnName: "useMemo",
   },
+  {
+    link: "/SocketIO",
+    btnName: "SocketIO",
+  },
 ];
 const Home = () => {
   return (

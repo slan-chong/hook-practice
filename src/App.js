@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import Search from "./Pages/Search";
 import HookAdvanced from "./Pages/HookAdvanced";
 import UseMemo from "./Pages/UseMemo";
+import SocketIO from "./Pages/SocketIO";
 const App = () => {
   return (
     <div className="App bg-gray-300 text-center">
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/Search" element={<Search />} />
         <Route path="/HookAdvanced" element={<HookAdvanced />} />
         <Route path="/useMemo" element={<UseMemo />} />
+        <Route path="/SocketIO" element={<SocketIO />} />
       </Routes>
     </div>
   );
